@@ -123,7 +123,7 @@ module AddressBook
                     ab.all_people
                   end
 
-      ab_people.sort! { |x, y| ABPersonComparePeopleByName(x, y, ordering)  }
+      ab_people = ab_people.sort { |x, y| ABPersonComparePeopleByName(x, y, ordering)  }
       ab_people
     end
   end
